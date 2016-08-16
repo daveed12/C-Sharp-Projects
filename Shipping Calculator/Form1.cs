@@ -36,7 +36,6 @@ namespace Project_6_Shipping_Rates
             double total;
             string total2;
             int checkShipping;
-            int[] possible = { 1, 2, 3, 4, 5, 6 };
             bool flag = false;
             bool flag2 = false;
 
@@ -47,86 +46,86 @@ namespace Project_6_Shipping_Rates
             }
             
             checkShipping = s1.CheckShipping(ComboBx1.SelectedIndex, ComboBx2.SelectedIndex);
-            
 
-            
+
+
 
             if (RadioBtn1.Checked == true)
             {
-                if (checkShipping == possible[0])
+                switch (checkShipping)
                 {
-                    total = (s1.GetStandardA() * items) + s1.GetStandardSur();
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[1])
-                {
-                    total = (s1.GetExpressA() * items) + s1.GetExpressSur();
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[2])
-                {
-                    total = (s1.GetSameA() * items) + s1.GetSameSur();
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[3])
-                {
-                    total = (s1.GetStandardB() * items) + s1.GetStandardSur(); ;
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[4])
-                {
-                    total = (s1.GetExpressB() * items) + s1.GetExpressSur();
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[5])
-                {
-                    total = (s1.GetSameB() * items) + s1.GetSameSur();
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
+                    case 1:
+                        total = (s1.GetStandardA() * items) + s1.GetStandardSur();
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+
+                    case 2:
+                        total = (s1.GetExpressA() * items) + s1.GetExpressSur();
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 3:
+                        total = (s1.GetSameA() * items) + s1.GetSameSur();
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 4:
+                        total = (s1.GetStandardB() * items) + s1.GetStandardSur();
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 5:
+                        total = (s1.GetExpressB() * items) + s1.GetExpressSur();
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 6:
+                        total = (s1.GetSameB() * items) + s1.GetSameSur();
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    default:
+                        break;
                 }
             }
             else if (RadioBtn2.Checked == true)
             {
-                if (checkShipping == possible[0])
+                switch (checkShipping)
                 {
-                    total = (s1.GetStandardA() * items);
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if(checkShipping == possible[1])
-                {
-                    total = (s1.GetExpressA() * items);
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[2])
-                {
-                    total = (s1.GetSameA() * items);
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[3])
-                {
-                    total = (s1.GetStandardB() * items);
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[4])
-                {
-                    total = (s1.GetExpressB() * items);
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
-                }
-                else if (checkShipping == possible[5])
-                {
-                    total = (s1.GetSameB() * items);
-                    total2 = string.Format("{0:C}", total);
-                    TxtBox2.Text = total2;
+                    case 1:
+                        total = (s1.GetStandardA() * items);
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+
+                    case 2:
+                        total = (s1.GetExpressA() * items);
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 3:
+                        total = (s1.GetSameA() * items);
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 4:
+                        total = (s1.GetStandardB() * items);
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 5:
+                        total = (s1.GetExpressB() * items);
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    case 6:
+                        total = (s1.GetSameB() * items);
+                        total2 = string.Format("{0:C}", total);
+                        TxtBox2.Text = total2;
+                        break;
+                    default:
+                        break;
                 }
             }
             else
