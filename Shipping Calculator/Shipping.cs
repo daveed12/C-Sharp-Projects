@@ -102,41 +102,40 @@ namespace Project_6_Shipping_Rates
             int checkMethod = b;
             int[] possible = { 1, 2, 3, 4, 5, 6 };
             
-            if(checkShip == 0 && checkMethod == 0)
+            switch(checkMethod)
             {
-                SetStandardA(standardA);
-                return possible[0];
-            }
-            else if (checkShip == 1 && checkMethod == 0)
-            {
-                SetExpressA(expressA);
-                return possible[1];
-            }
-            else if (checkShip == 2 && checkMethod == 0)
-            {
-                SetSameA(sameA);
-                return possible[2];
-            }
-            else
-            {
-                if (checkShip == 0 && checkMethod == 1)
-                {
-                    SetStandardB(standardB);
-                    return possible[3];
-                }
-                else if (checkShip == 1 && checkMethod == 1)
-                {
-                    SetExpressB(expressB);
-                    return possible[4];
-                }
-                else if (checkShip == 2 && checkMethod == 1)
-                {
-                    SetSameB(sameB);
-                    return possible[5];
-                }
+                case 0:
+                    switch (checkShip)
+                    {
+                        case 0:
+                            SetStandardA(standardA);
+                            return possible[0];
+                        case 1:
+                            SetExpressA(expressA);
+                            return possible[1];
+                            
+                        case 2:
+                            SetSameA(sameA);
+                            return possible[2];
+                          
+                    }
+                    break;
+                case 1:
+                    switch (checkShip)
+                    {
+                        case 0:
+                            SetStandardB(standardB);
+                            return possible[3];
+                        case 1:
+                            SetExpressB(expressB);
+                            return possible[4];
+                        case 2:
+                            SetSameB(sameB);
+                            return possible[5];
+                    }
+                    break;
             }
             return 0;
-           
         }
 
 
