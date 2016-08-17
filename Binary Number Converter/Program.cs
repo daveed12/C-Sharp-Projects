@@ -15,6 +15,9 @@ namespace Binary_Number_Converter
             bool flag = false;
             bool isYes = false;
             bool isBinary = false;
+			double decNum;
+            double total = 0;
+            int multiple = 2;
             string response;
 
             Console.WriteLine("This program converts binary numbers into decimal numbers.\n");
@@ -55,10 +58,7 @@ namespace Binary_Number_Converter
                 }
                 while (isBinary == false);
 
-                double decNum;
-                double total = 0;
-                int multiple = 2;
-                int[] check = { 0, 1 };
+              
                     for (int i = 0; i < number.Length; i++)
                     {
                         decNum = number[i] * Math.Pow(multiple, i);
