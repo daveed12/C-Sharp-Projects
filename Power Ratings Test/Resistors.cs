@@ -106,7 +106,7 @@ namespace Testing_Power_Ratings
                 dissipation[i] = (voltages[i] * voltages[i]) / GetResistance();
             }
         }
-        //Purpose: See if dissipation passed the text or not. Dissipation passes if dissipation>power
+        //Purpose: See if dissipation passed the test or not. Dissipation passes if dissipation>power
         public void Pass(double [] dissipation)
         {
             for(int i=0; i<GetLength(); i++)
